@@ -10,6 +10,8 @@ public class Anagram {
 		System.out.println(isAnagram("baba","abba"));
 		System.out.println(isAnagram("babaa","abcba"));
 		System.out.println(isAnagram("baba","abcba"));
+		System.out.println(isAnagram("   ","  "));
+		System.out.println(isAnagram("a "," a"));
 
 
 		// Tests the preProcess function.
@@ -47,7 +49,6 @@ public class Anagram {
 		int i = 0;
 		while (i < newStr1.length()){
 			Character c = newStr1.charAt(i);
-			boolean boolTerm = true;
 			int j = 0;
 			newForCheck = "";
 			while (j < newStr2.length()){
@@ -81,7 +82,7 @@ public class Anagram {
 		String newLower = str.toLowerCase();
 		for (int i = 0; i < newLower.length(); i++){
 			Character c = newLower.charAt(i);
-			if( (c >= 'a' && c <= 'z') ){
+			if( (c >= 'a' && c <= 'z') || c == ' '){
 				newString = newString + c;
 			}
 		}
