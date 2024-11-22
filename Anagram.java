@@ -81,7 +81,7 @@ public class Anagram {
 		String newLower = str.toLowerCase();
 		for (int i = 0; i < newLower.length(); i++){
 			Character c = newLower.charAt(i);
-			if( c >= 'a' && c <= 'z'){
+			if( (c >= 'a' && c <= 'z') || c == ' '){
 				newString = newString + c;
 			}
 		}
@@ -95,7 +95,7 @@ public class Anagram {
 		int numberToChoose = (int)(Math.random() * str.length());
 		String newString = "";
 		String helper = "";
-		while(str != ""){
+		while (str != ""){
 			helper = "";
 			numberToChoose = (int)(Math.random() * str.length());
 			newString = newString + str.charAt(numberToChoose);
