@@ -121,7 +121,7 @@ public class Anagram {
 		String newLower = str.toLowerCase();
 		for (int i = 0; i < newLower.length(); i++){
 			char c = newLower.charAt(i);
-			if( (c >= 'a' && c <= 'z') || c == ' '){
+			if( (c >= 'a' && c <= 'z')){
 				newString = newString + c;
 			}
 		}
