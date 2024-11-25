@@ -6,12 +6,14 @@ public class Anagram {
 		System.out.println(isAnagram("William Shakespeare","I am a weakish speller")); // true
 		System.out.println(isAnagram("Madam Curie","Radium came")); // true
 		System.out.println(isAnagram("Tom Marvolo Riddle","I am Lord Voldemort")); // true
-		System.out.println("mine");
-		System.out.println(isAnagram("baba","abba"));
-		System.out.println(isAnagram("babaa","abcba"));
-		System.out.println(isAnagram("baba","abcba"));
-		System.out.println(isAnagram("   ","  "));
-		System.out.println(isAnagram("a "," a"));
+		System.out.println("##############################################");
+		System.out.println("####################mine######################");
+		System.out.println("##############################################");
+		System.out.println(isAnagram("baba","abba")); //true
+		System.out.println(isAnagram("babaa","abcba")); //false
+		System.out.println(isAnagram("baba","abcba")); //false
+		System.out.println(isAnagram("   ","  ")); //false
+		System.out.println(isAnagram("a "," a")); //true
 
 
 		// Tests the preProcess function.
@@ -42,17 +44,18 @@ public class Anagram {
 		String newStr2 = preProcess(str2);
 		String newForCheck = "";
 
-		if(newStr1.length() != newStr2.length()){
-			return false;
-		}
+		//if(newStr1.length() != newStr2.length()){
+		//	System.out.println("the length isnt eq");
+		//	return false;
+		//}
 
 		int i = 0;
 		while (i < newStr1.length()){
-			Character c = newStr1.charAt(i);
+			char c = newStr1.charAt(i);
 			int j = 0;
 			newForCheck = "";
 			while (j < newStr2.length()){
-				Character c2 = newStr2.charAt(j);
+				char c2 = newStr2.charAt(j);
 				if (c == c2){
 					j++;
 				}
@@ -69,7 +72,7 @@ public class Anagram {
 			return true;
 		}
 
-
+		System.out.println("out");
 		return false;
 	}
 	   
@@ -81,7 +84,7 @@ public class Anagram {
 		String newString = "";
 		String newLower = str.toLowerCase();
 		for (int i = 0; i < newLower.length(); i++){
-			Character c = newLower.charAt(i);
+			char c = newLower.charAt(i);
 			if( (c >= 'a' && c <= 'z') || c == ' '){
 				newString = newString + c;
 			}
